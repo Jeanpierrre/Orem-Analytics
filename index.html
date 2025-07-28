@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smash Analytics - Transformamos Datos en Decisiones</title>
+    <meta name="description" content="Especialistas en análisis de datos empresarial. Convertimos tu información en insights estratégicos para el crecimiento de tu negocio.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-chart-line"></i>
+                <span>Smash Analytics</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#inicio" class="nav-link">Inicio</a>
+                <a href="#nosotros" class="nav-link">Nosotros</a>
+                <a href="#paquetes" class="nav-link">Paquetes</a>
+                <a href="#equipo" class="nav-link">Equipo</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-background">
+            <img src="images/corporate-buildings.jpg" alt="Edificios corporativos" class="hero-bg-image">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content animate-on-scroll">
+            <div class="hero-badge">
+                <i class="fas fa-award"></i>
+                <span>Líderes en Análisis de Datos</span>
+            </div>
+            
+            <h1 class="hero-title">
+                Transformamos
+                <span class="highlight">DATOS</span>
+                en
+                <span class="highlight">DECISIONES</span>
+            </h1>
+            
+            <p class="hero-subtitle">
+                Recibimos tu información empresarial y la convertimos en insights estratégicos 
+                y decisiones inteligentes para acelerar el crecimiento de tu negocio
+            </p>
+            
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('paquetes')">
+                    <span>Descubre Nuestros Paquetes</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <button class="btn btn-secondary" onclick="scrollToSection('nosotros')">
+                    Conocer Más
+                </button>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <div class="scroll-dot"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="about">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">¿Quiénes <span class="highlight">Somos</span>?</h2>
+                <p class="section-subtitle">
+                    Especialistas en análisis de datos con una pasión por convertir información compleja 
+                    en estrategias claras y efectivas para el crecimiento empresarial sostenible.
+                </p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-card animate-on-scroll" data-delay="0">
+                    <div class="card-image">
+                        <img src="images/business-meeting.jpg" alt="Nuestra Visión">
+                        <div class="card-overlay">
+                            <i class="fas fa-building"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Nuestra Visión</h3>
+                        <p>Ser la empresa líder en análisis de datos en Latinoamérica, democratizando el acceso a insights valiosos para empresas de todos los tamaños y sectores industriales.</p>
+                    </div>
+                </div>
+                
+                <div class="about-card animate-on-scroll" data-delay="200">
+                    <div class="card-image">
+                        <img src="images/data-analysis.jpg" alt="Cómo Ayudamos">
+                        <div class="card-overlay">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Cómo Ayudamos</h3>
+                        <p>Transformamos datos complejos en reportes visuales ejecutivos y recomendaciones estratégicas que impulsan el crecimiento exponencial de tu negocio.</p>
+                    </div>
+                </div>
+                
+                <div class="about-card animate-on-scroll" data-delay="400">
+                    <div class="card-image">
+                        <img src="images/1data-dashboard.png" alt="Nuestro Proceso">
+                        <div class="card-overlay">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Nuestro Proceso</h3>
+                        <p>Recibimos tu data empresarial, la analizamos con herramientas de inteligencia artificial avanzada y te entregamos insights claros y accionables.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="paquetes" class="packages">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">
+                    <i class="fas fa-star"></i>
+                    <span>Soluciones Empresariales Premium</span>
+                </div>
+                <h2 class="section-title">Nuestros <span class="highlight">Paquetes</span></h2>
+                <p class="section-subtitle">
+                    Elige el paquete que mejor se adapte a las necesidades estratégicas de tu empresa
+                </p>
+            </div>
+            
+            <div class="packages-grid">
+                <div class="package-card animate-on-scroll" data-delay="0">
+                    <div class="package-header">
+                        <div class="package-icon">
+                            <i class="fas fa-target"></i>
+                        </div>
+                        <h3>Paquete Básico</h3>
+                        <p class="package-description">Análisis profesional de 3 variables clave</p>
+                        <div class="package-price">
+                            <span class="currency">S/</span>
+                            <span class="amount">500</span>
+                            <span class="period">por proyecto</span>
+                        </div>
+                    </div>
+                    
+                    <div class="package-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Análisis de 3 variables clave</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Reporte ejecutivo en PDF</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>1 sesión de consultoría estratégica</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Gráficos interactivos profesionales</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Dashboard básico personalizado</span>
+                        </div>
+                    </div>
+                    
+                    <div class="package-buttons">
+                        <button class="btn btn-primary" onclick="contactEmail('Paquete Básico')">
+                            <i class="fas fa-envelope"></i>
+                            Contactar por Email
+                        </button>
+                        <button class="btn btn-whatsapp" onclick="contactWhatsApp('Paquete Básico')">
+                            <i class="fab fa-whatsapp"></i>
+                            WhatsApp
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="package-card popular animate-on-scroll" data-delay="200">
+                    <div class="popular-badge">
+                        <i class="fas fa-crown"></i>
+                        <span>Más Popular</span>
+                    </div>
+                    
+                    <div class="package-header">
+                        <div class="package-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Paquete Profesional</h3>
+                        <p class="package-description">Análisis profundo de 5 variables</p>
+                        <div class="package-price">
+                            <span class="currency">S/</span>
+                            <span class="amount">850</span>
+                            <span class="period">por proyecto</span>
+                        </div>
+                    </div>
+                    
+                    <div class="package-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Análisis profundo de 5 variables</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Dashboard interactivo avanzado</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>3 sesiones de consultoría estratégica</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Recomendaciones de crecimiento</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Análisis de tendencias del mercado</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Soporte especializado por 30 días</span>
+                        </div>
+                    </div>
+                    
+                    <div class="package-buttons">
+                        <button class="btn btn-primary" onclick="contactEmail('Paquete Profesional')">
+                            <i class="fas fa-envelope"></i>
+                            Contactar por Email
+                        </button>
+                        <button class="btn btn-whatsapp" onclick="contactWhatsApp('Paquete Profesional')">
+                            <i class="fab fa-whatsapp"></i>
+                            WhatsApp
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="package-card animate-on-scroll" data-delay="400">
+                    <div class="package-header">
+                        <div class="package-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Paquete Enterprise</h3>
+                        <p class="package-description">Análisis completo de 10+ variables</p>
+                        <div class="package-price">
+                            <span class="currency">S/</span>
+                            <span class="amount">1200</span>
+                            <span class="period">por proyecto</span>
+                        </div>
+                    </div>
+                    
+                    <div class="package-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Análisis completo de 10+ variables</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Dashboard ejecutivo personalizado</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Consultoría ilimitada por 60 días</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Predicciones con IA avanzada</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Integración con sistemas empresariales</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Análisis competitivo del sector</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Soporte prioritario 24/7</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Reportes automatizados mensuales</span>
+                        </div>
+                    </div>
+                    
+                    <div class="package-buttons">
+                        <button class="btn btn-primary" onclick="contactEmail('Paquete Enterprise')">
+                            <i class="fas fa-envelope"></i>
+                            Contactar por Email
+                        </button>
+                        <button class="btn btn-whatsapp" onclick="contactWhatsApp('Paquete Enterprise')">
+                            <i class="fab fa-whatsapp"></i>
+                            WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="equipo" class="team">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Nuestro <span class="highlight">Equipo</span></h2>
+                <p class="section-subtitle">
+                    Conoce a los expertos que transformarán tus datos en oportunidades estratégicas de crecimiento empresarial
+                </p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-card animate-on-scroll" data-delay="0">
+                    <div class="team-image">
+                        <img src="images/team-analytics-1.png" alt="Christian Vizcardo">
+                        <div class="team-overlay">
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-content">
+                        <h3>Christian Vizcardo</h3>
+                        <p class="team-role">Analista de Datos Senior & Co-Fundador</p>
+                        <p class="team-description">
+                            Especialista en análisis estadístico avanzado y visualización de datos empresariales con más de 5 años de experiencia en proyectos corporativos. Nos encargamos de convertir datos complejos en insights estratégicos accionables.
+                        </p>
+                        
+                        <div class="team-skills">
+                            <span class="skill">Machine Learning</span>
+                            <span class="skill">Business Intelligence</span>
+                            <span class="skill">Análisis Predictivo</span>
+                            <span class="skill">Consultoría Estratégica</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card animate-on-scroll" data-delay="300">
+                    <div class="team-image">
+                        <img src="images/team-analytics-2.jpg" alt="Jean Pierre">
+                        <div class="team-overlay">
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-content">
+                        <h3>Jean Pierre</h3>
+                        <p class="team-role">Analista de Datos Senior & Co-Fundador</p>
+                        <p class="team-description">
+                            Experto en machine learning, análisis predictivo y desarrollo de soluciones de inteligencia artificial para empresas. Tenemos experiencia trabajando con compañías de diversos sectores industriales.
+                        </p>
+                        
+                        <div class="team-skills">
+                            <span class="skill">Inteligencia Artificial</span>
+                            <span class="skill">Data Science</span>
+                            <span class="skill">Análisis de Mercado</span>
+                            <span class="skill">Optimización de Procesos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="footer">
+        <div class="container">
+            <div class="footer-content animate-on-scroll">
+                <div class="footer-logo">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Smash Analytics</span>
+                </div>
+                
+                <p class="footer-description">
+                    Transformando datos empresariales en decisiones inteligentes para el crecimiento sostenible 
+                    y la competitividad en el mercado global
+                </p>
+                
+                <div class="footer-buttons">
+                    <button class="btn btn-outline" onclick="window.open('mailto:sotomayorcavero@gmail.com')">
+                        <i class="fas fa-envelope"></i>
+                        Email Corporativo
+                    </button>
+                    <button class="btn btn-outline" onclick="window.open('https://wa.me/51926883329')">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp Business
+                    </button>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Smash Analytics. Todos los derechos reservados. | Soluciones empresariales de análisis de datos</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
