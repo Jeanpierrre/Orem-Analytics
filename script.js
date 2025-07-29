@@ -278,7 +278,7 @@ document.addEventListener("DOMContentLoaded", () => {
             top: 100%;
             left: 0;
             right: 0;
-            background: rgba(26, 26, 46, 0.98);
+            background: rgba(24, 24, 24, 0.98); /* Use darkest color for mobile menu */
             backdrop-filter: blur(20px);
             padding: 20px;
             border-radius: 0 0 15px 15px;
