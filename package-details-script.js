@@ -75,6 +75,8 @@ const packageData = {
       },
       pageTitle: "Paquete Starter - Orem Analytics",
       pageDescription: "Paquete Starter de Orem Analytics - Análisis básico para empresas en crecimiento",
+      purchaseHeaderTitle: "¿Listo para comenzar?",
+      purchaseHeaderSubtitle: "Transforma tus datos en decisiones inteligentes",
     },
     en: {
       title: "Starter Package",
@@ -146,6 +148,8 @@ const packageData = {
       },
       pageTitle: "Starter Package - Orem Analytics",
       pageDescription: "Orem Analytics Starter Package - Basic analysis for growing companies",
+      purchaseHeaderTitle: "Ready to start?",
+      purchaseHeaderSubtitle: "Transform your data into intelligent decisions",
     },
   },
   Professional: {
@@ -171,7 +175,7 @@ const packageData = {
             "Dashboard inteligente con capacidades de IA que aprende de tus datos y proporciona recomendaciones automáticas.",
         },
         {
-          icon: "fas fa-crystal-ball",
+          icon: "fas fa-brain",
           title: "Análisis Predictivo",
           description:
             "Modelos de machine learning para predecir tendencias futuras, demanda y oportunidades de crecimiento.",
@@ -233,6 +237,8 @@ const packageData = {
       },
       pageTitle: "Paquete Professional - Orem Analytics",
       pageDescription: "Paquete Professional de Orem Analytics - Análisis avanzado para empresas establecidas",
+      purchaseHeaderTitle: "¿Listo para comenzar?",
+      purchaseHeaderSubtitle: "Transforma tus datos en decisiones inteligentes",
     },
     en: {
       title: "Professional Package",
@@ -315,6 +321,8 @@ const packageData = {
       },
       pageTitle: "Professional Package - Orem Analytics",
       pageDescription: "Orem Analytics Professional Package - Advanced analysis for established companies",
+      purchaseHeaderTitle: "Ready to start?",
+      purchaseHeaderSubtitle: "Transform your data into intelligent decisions",
     },
   },
   Enterprise: {
@@ -403,6 +411,91 @@ const packageData = {
       },
       pageTitle: "Paquete Enterprise - Orem Analytics",
       pageDescription: "Paquete Enterprise de Orem Analytics - Solución completa para grandes corporaciones",
+      purchaseHeaderTitle: "Solución Enterprise",
+      purchaseHeaderSubtitle: "La solución más completa y avanzada",
+    },
+    en: {
+      title: "Enterprise Package",
+      subtitle: "Complete solution for large corporations",
+      iconClass: "fas fa-crown",
+      price: "7,500",
+      period: "per project",
+      isPopular: false,
+      isEnterprise: true,
+      features: [
+        {
+          icon: "fas fa-infinity",
+          title: "Unlimited Variable Analysis",
+          description:
+            "Complete analysis of all relevant variables for your business, with no limits on the number of metrics to evaluate.",
+        },
+        {
+          icon: "fas fa-brain",
+          title: "Advanced AI and Machine Learning",
+          description: "Implementation of deep learning algorithms, neural networks, and latest-generation AI models.",
+        },
+        {
+          icon: "fas fa-plug",
+          title: "ERP System Integration",
+          description:
+            "Direct connection with SAP, Oracle, Microsoft Dynamics, and other enterprise systems for real-time analysis.",
+        },
+        {
+          icon: "fas fa-users-cog",
+          title: "Unlimited Consulting",
+          description: "Unlimited access to our team of experts throughout the project and support period.",
+        },
+        {
+          icon: "fas fa-headset",
+          title: "24/7 Priority Support",
+          description: "Premium technical support 24 hours a day, 7 days a week with guaranteed response time.",
+        },
+      ],
+      timeline: [
+        {
+          number: 1,
+          title: "Strategic Analysis (Days 1-3)",
+          description: "Complete evaluation of data architecture, business objectives, and definition of AI strategy.",
+        },
+        {
+          number: 2,
+          title: "System Integration (Days 4-10)",
+          description:
+            "Connection with ERP systems, data pipeline configuration, and establishment of AI architecture.",
+        },
+        {
+          number: 3,
+          title: "AI Development (Days 11-20)",
+          description: "Implementation of advanced machine learning models and development of enterprise dashboards.",
+        },
+        {
+          number: 4,
+          title: "Training and Go-Live (Days 21-25)",
+          description: "Complete team training, production launch, and start of 24/7 support.",
+        },
+      ],
+      idealFor: [
+        { icon: "fas fa-building", text: "Large corporations and multinationals" },
+        { icon: "fas fa-industry", text: "Companies with complex ERP systems" },
+        { icon: "fas fa-globe", text: "Organizations with global operations" },
+        { icon: "fas fa-shield-alt", text: "Companies requiring maximum security and support" },
+      ],
+      purchaseBenefits: [
+        { icon: "fas fa-check", text: "Delivery in 25 days" },
+        { icon: "fas fa-check", text: "24/7 priority support" },
+        { icon: "fas fa-check", text: "Full ERP integration" },
+        { icon: "fas fa-check", text: "Latest generation AI and ML" },
+        { icon: "fas fa-check", text: "Unlimited consulting" },
+      ],
+      guarantee: {
+        icon: "fas fa-award",
+        title: "Enterprise Guarantee",
+        description: "Extended satisfaction guarantee with guaranteed SLA and priority support throughout the project.",
+      },
+      pageTitle: "Enterprise Package - Orem Analytics",
+      pageDescription: "Orem Analytics Enterprise Package - Complete solution for large corporations",
+      purchaseHeaderTitle: "Enterprise Solution",
+      purchaseHeaderSubtitle: "The most complete and advanced solution",
     },
   },
 }
@@ -443,12 +536,24 @@ function loadPackageDetails() {
   if (!data) {
     // Handle case where package name is invalid or data is missing
     document.getElementById("packageHero").innerHTML =
-      `<h1 class="package-title">Paquete no encontrado</h1><p class="package-subtitle">Por favor, regresa a la página principal.</p>`
+      `<h1 class="package-title">${currentLang === "es" ? "Paquete no encontrado" : "Package Not Found"}</h1><p class="package-subtitle">${currentLang === "es" ? "Por favor, regresa a la página principal." : "Please return to the main page."}</p>`
     document.getElementById("featuresDetailed").innerHTML = ""
     document.getElementById("timeline").innerHTML = ""
     document.getElementById("idealFor").innerHTML = ""
     document.getElementById("purchaseCard").innerHTML = ""
     document.getElementById("guaranteeCard").innerHTML = ""
+
+    // Update page title and description for "not found" state
+    document.getElementById("packagePageTitle").textContent =
+      currentLang === "es" ? "Paquete no encontrado" : "Package Not Found"
+    document
+      .getElementById("packagePageDescription")
+      .setAttribute(
+        "content",
+        currentLang === "es"
+          ? "La información del paquete solicitado no pudo ser encontrada."
+          : "The requested package information could not be found.",
+      )
     return
   }
 
@@ -457,20 +562,24 @@ function loadPackageDetails() {
   document.getElementById("packagePageDescription").setAttribute("content", data.pageDescription)
 
   // Render Package Hero
+  const packageHeroElement = document.getElementById("packageHero")
+  packageHeroElement.classList.toggle("popular", data.isPopular)
+  packageHeroElement.classList.toggle("enterprise", data.isEnterprise)
+
   const heroHtml = `
         ${
           data.isPopular
-            ? `<div class="popular-badge-large" data-es="Más Popular" data-en="Most Popular">
+            ? `<div class="popular-badge-large" data-es="${packageData[packageName].es.isPopular ? "Más Popular" : ""}" data-en="${packageData[packageName].en.isPopular ? "Most Popular" : ""}">
             <i class="fas fa-crown"></i>
-            <span data-es="Más Popular" data-en="Most Popular">Más Popular</span>
+            <span data-es="${packageData[packageName].es.isPopular ? "Más Popular" : ""}" data-en="${packageData[packageName].en.isPopular ? "Most Popular" : ""}">${data.isPopular ? (currentLang === "es" ? "Más Popular" : "Most Popular") : ""}</span>
         </div>`
             : ""
         }
         ${
           data.isEnterprise
-            ? `<div class="enterprise-badge-large" data-es="Enterprise" data-en="Enterprise">
+            ? `<div class="enterprise-badge-large" data-es="${packageData[packageName].es.isEnterprise ? "Enterprise" : ""}" data-en="${packageData[packageName].en.isEnterprise ? "Enterprise" : ""}">
             <i class="fas fa-crown"></i>
-            <span data-es="Enterprise" data-en="Enterprise">Enterprise</span>
+            <span data-es="${packageData[packageName].es.isEnterprise ? "Enterprise" : ""}" data-en="${packageData[packageName].en.isEnterprise ? "Enterprise" : ""}">${data.isEnterprise ? (currentLang === "es" ? "Enterprise" : "Enterprise") : ""}</span>
         </div>`
             : ""
         }
@@ -485,9 +594,7 @@ function loadPackageDetails() {
             <span class="period" data-es="${packageData[packageName].es.period}" data-en="${packageData[packageName].en.period}">${data.period}</span>
         </div>
     `
-  document.getElementById("packageHero").innerHTML = heroHtml
-  if (data.isPopular) document.getElementById("packageHero").classList.add("popular")
-  if (data.isEnterprise) document.getElementById("packageHero").classList.add("enterprise")
+  packageHeroElement.innerHTML = heroHtml
 
   // Render Features
   const featuresHtml = data.features
@@ -548,10 +655,14 @@ function loadPackageDetails() {
     )
     .join("")
 
+  const purchaseCardElement = document.getElementById("purchaseCard")
+  purchaseCardElement.classList.toggle("popular", data.isPopular)
+  purchaseCardElement.classList.toggle("enterprise", data.isEnterprise)
+
   const purchaseCardHtml = `
         <div class="purchase-header">
-            <h3 data-es="${packageName === "Enterprise" ? "Solución Enterprise" : "¿Listo para comenzar?"}" data-en="${packageName === "Enterprise" ? "Enterprise Solution" : "Ready to start?"}">${packageName === "Enterprise" ? data.purchaseHeaderTitle : currentLang === "es" ? "¿Listo para comenzar?" : "Ready to start?"}</h3>
-            <p data-es="${packageName === "Enterprise" ? "La solución más completa y avanzada" : "Transforma tus datos en decisiones inteligentes"}" data-en="${packageName === "Enterprise" ? "The most complete and advanced solution" : "Transform your data into intelligent decisions"}">${packageName === "Enterprise" ? data.purchaseHeaderSubtitle : currentLang === "es" ? "Transforma tus datos en decisiones inteligentes" : "Transform your data into intelligent decisions"}</p>
+            <h3 data-es="${packageData[packageName].es.purchaseHeaderTitle}" data-en="${packageData[packageName].en.purchaseHeaderTitle}">${data.purchaseHeaderTitle}</h3>
+            <p data-es="${packageData[packageName].es.purchaseHeaderSubtitle}" data-en="${packageData[packageName].en.purchaseHeaderSubtitle}">${data.purchaseHeaderSubtitle}</p>
         </div>
         
         <div class="purchase-price">
@@ -574,9 +685,7 @@ function loadPackageDetails() {
             <span data-es="Más Información" data-en="More Information">Más Información</span>
         </button>
     `
-  document.getElementById("purchaseCard").innerHTML = purchaseCardHtml
-  if (data.isPopular) document.getElementById("purchaseCard").classList.add("popular")
-  if (data.isEnterprise) document.getElementById("purchaseCard").classList.add("enterprise")
+  purchaseCardElement.innerHTML = purchaseCardHtml
 
   // Render Guarantee Card
   const guaranteeCardHtml = `
@@ -589,11 +698,24 @@ function loadPackageDetails() {
   document.getElementById("guaranteeCard").innerHTML = guaranteeCardHtml
 
   // Update language attributes for dynamic content
+  // This part is crucial for ensuring dynamically loaded content also respects the language
   document.querySelectorAll("#packageHero [data-es], #packageHero [data-en]").forEach((el) => {
-    el.textContent = el.getAttribute(`data-${currentLang}`)
+    const esText = packageData[packageName].es[el.dataset.esKey || ""] || el.getAttribute("data-es")
+    const enText = packageData[packageName].en[el.dataset.enKey || ""] || el.getAttribute("data-en")
+    if (esText && enText) {
+      el.textContent = currentLang === "es" ? esText : enText
+    } else if (el.hasAttribute(`data-${currentLang}`)) {
+      el.textContent = el.getAttribute(`data-${currentLang}`)
+    }
   })
   document.querySelectorAll("#purchaseCard [data-es], #purchaseCard [data-en]").forEach((el) => {
-    el.textContent = el.getAttribute(`data-${currentLang}`)
+    const esText = packageData[packageName].es[el.dataset.esKey || ""] || el.getAttribute("data-es")
+    const enText = packageData[packageName].en[el.dataset.enKey || ""] || el.getAttribute("data-en")
+    if (esText && enText) {
+      el.textContent = currentLang === "es" ? esText : enText
+    } else if (el.hasAttribute(`data-${currentLang}`)) {
+      el.textContent = el.getAttribute(`data-${currentLang}`)
+    }
   })
 }
 
@@ -709,9 +831,13 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
-  loadPackageDetails() // Load content based on URL parameter
+  // Set initial language from localStorage or default
+  const storedLang = localStorage.getItem("currentLang")
+  if (storedLang) {
+    currentLang = storedLang
+  } else {
+    currentLang = "es" // Default to Spanish
+  }
+  switchLanguagePackage(currentLang) // Load content based on URL parameter and current language
   setupMobileMenu()
-
-  // Set initial language
-  switchLanguagePackage(currentLang)
 })

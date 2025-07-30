@@ -40,10 +40,10 @@ html {
   --bg-card-on-light-section: var(--color-white); /* Opaque white for contact section elements */
 
   /* Accent Gradients */
-  --gradient-accent-primary: linear-gradient(135deg, var(--color-medium-dark) 0%, var(--color-dark) 100%);
-  --gradient-accent-highlight: linear-gradient(135deg, var(--color-light) 0%, var(--color-white) 100%);
+  --gradient-accent-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Original blue/purple */
+  --gradient-accent-highlight: linear-gradient(135deg, var(--color-dark) 0%, var(--color-medium-dark) 100%); /* Darker for light backgrounds */
   --gradient-hero-title: linear-gradient(
-    135deg,
+    205deg,
     var(--color-white) 0%,
     var(--color-medium-light) 50%,
     var(--color-medium-dark) 100%
@@ -100,11 +100,11 @@ html {
   --shadow-purchase-card-popular: rgba(var(--color-medium-dark-rgb), 0.2);
 
   /* Specific Colors (non-gradient) */
-  --color-accent: var(--color-medium-dark);
+  --color-accent: #667eea; /* Original blue/purple accent color */
   --color-currency: var(--color-medium-dark);
   --color-stat-number: var(--color-medium-dark);
   --color-icon-on-dark-bg: var(--color-white);
-  --color-icon-on-light-bg: var(--color-medium-dark);
+  --color-icon-on-light-bg: var(--color-medium-dark); /* Default for icons on light backgrounds */
 
   /* Keep specific colors */
   --bg-guarantee-icon: linear-gradient(135deg, #10b981 0%, #059669 100%); /* Green */
@@ -525,7 +525,7 @@ section {
 
 .section-subtitle {
   font-size: 1.2rem;
-  color: var(--text-secondary-light); /* Secondary text color for dark background */
+  color: #000000; /* Secondary text color for dark background */
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.6;
@@ -686,16 +686,19 @@ section {
   padding: 120px 0; /* Ensure consistent padding */
 }
 
-.tools .section-header .section-title,
-.tools .section-header .section-subtitle {
-  color: var(--text-primary-light); /* White text on dark background */
+.tools .section-header .section-title {
+  color: var(--text-primary-dark); /* Dark text on light background */
 }
 
 .tools .section-header .section-title .highlight {
-  background: var(--gradient-accent-highlight); /* Lighter gradient for highlight */
+  background: var(--gradient-accent-highlight); /* Darker gradient for highlight */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.tools .section-header .section-subtitle {
+  color: var(--text-secondary-dark); /* Dark text on light background */
 }
 
 .tools-logos {
@@ -711,65 +714,105 @@ section {
   align-items: center;
   gap: 15px;
   padding: 30px 20px;
-  background: rgba(var(--color-white-rgb), 0.1); /* Transparent white for tool logos on dark section */
+  background: rgba(var(--color-dark-rgb), 0.05); /* Transparent dark for tool logos on light section */
   backdrop-filter: blur(20px);
   border-radius: 15px;
   transition: all 0.4s ease;
-  border: 1px solid rgba(var(--color-white-rgb), 0.2);
+  border: 1px solid rgba(var(--color-dark-rgb), 0.1);
 }
 
 .tool-logo:hover {
   transform: translateY(-10px);
-  background: rgba(var(--color-white-rgb), 0.2); /* Slightly more opaque on hover */
-  border-color: rgba(var(--color-white-rgb), 0.4);
+  background: rgba(var(--color-dark-rgb), 0.1); /* Slightly more opaque on hover */
+  border-color: rgba(var(--color-dark-rgb), 0.2);
 }
 
+/* Remove grayscale and set specific colors for tool icons */
 .tool-logo i {
   font-size: 3rem;
-  color: var(--color-icon-on-dark-bg); /* White icons on dark background */
+  /* color: var(--color-icon-on-light-bg); -- This was the old default */
   transition: all 0.4s ease;
 }
 
 .tool-logo:hover i {
-  color: var(--color-white); /* Keep white on hover */
+  /* color: var(--color-accent); -- This was the old hover */
   transform: scale(1.2);
 }
 
 .tool-logo span {
   font-weight: 600;
-  color: var(--text-primary-light); /* White text on dark background */
+  color: var(--text-primary-dark); /* Dark text on light background */
 }
 
-.stats-section {
+/* Companies Section (New) */
+.companies-section {
   margin-top: 60px;
-}
-
-.stats-card {
-  background: var(--gradient-stats-card);
+  text-align: center;
+  padding: 40px 0;
+  background: rgba(var(--color-white-rgb), 0.05); /* Light transparent background */
   backdrop-filter: blur(20px);
   border-radius: 25px;
-  padding: 60px 40px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 40px;
-  border: var(--border-stats-card);
+  border: 1px solid rgba(var(--color-white-rgb), 0.1);
 }
 
-.stat-item {
-  text-align: center;
+.companies-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary-dark); /* Dark text on light background */
+  margin-bottom: 40px;
 }
 
-.stat-number {
-  font-size: 4rem;
-  font-weight: 800;
-  color: var(--color-stat-number); /* Stat number color */
-  margin-bottom: 10px;
+.companies-marquee-container {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
 }
 
-.stat-label {
-  font-size: 1.1rem;
-  color: var(--text-secondary-light); /* Secondary text color for dark background */
-  font-weight: 500;
+.companies-marquee {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 30s linear infinite; /* Adjust duration as needed */
+}
+
+.company-logo-item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 25px;
+  margin: 0 15px; /* Space between logos */
+  background: rgba(var(--color-dark-rgb), 0.05); /* Light transparent dark background for logos */
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(var(--color-dark-rgb), 0.1);
+}
+
+.company-logo-item:hover {
+  transform: translateY(-5px) scale(1.05);
+  background: rgba(var(--color-dark-rgb), 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.company-logo-item img {
+  height: 60px; /* Fixed height for logos */
+  width: auto; /* Maintain aspect ratio */
+  /* filter: grayscale(100%); -- Removed grayscale */
+  opacity: 0.9; /* Slightly reduce opacity to blend, but keep color */
+  transition: all 0.3s ease;
+}
+
+.company-logo-item:hover img {
+  /* filter: grayscale(0%); -- Removed grayscale */
+  opacity: 1;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%); /* Move half the width to loop seamlessly */
+  }
 }
 
 /* Advantages Section */
@@ -780,7 +823,7 @@ section {
 }
 
 .advantage-card {
-  background: var(--bg-card-transparent-dark); /* Subtle transparent white on dark sections */
+  background: #edebeb ; /* rojo medio translúcido */
   backdrop-filter: blur(20px);
   padding: 40px 30px;
   border-radius: 20px;
@@ -835,13 +878,18 @@ section {
   font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 20px;
-  color: var(--text-primary-light); /* Primary text color for dark background */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
+
 .advantage-card p {
-  color: var(--text-secondary-light); /* Secondary text color for dark background */
+  color: #000000; /* Negro sólido */
   line-height: 1.6;
 }
+
 
 /* Packages Section */
 .packages-grid {
@@ -1244,7 +1292,6 @@ section {
 .contact-details h4 {
   font-size: 1.2rem;
   font-weight: 600;
-  margin-bottom: 8px;
   color: var(--text-primary-dark); /* Primary text color for light background */
 }
 
@@ -1322,6 +1369,43 @@ section {
   transform: translateY(0);
 }
 
+/* Particle Animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Gradient Text Animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-text {
+  background: var(--gradient-text-animation);
+  background-size: 400% 400%;
+  animation: gradientShift 3s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .contact-content {
@@ -1341,6 +1425,28 @@ section {
 
   .nav-toggle {
     display: flex;
+  }
+
+  .nav-menu.active {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(var(--color-darkest-rgb), 0.98); /* Use darkest color for mobile menu */
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    border-radius: 0 0 15px 15px;
+  }
+  .nav-toggle.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-toggle.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
   }
 
   .hero-title {
@@ -1374,11 +1480,6 @@ section {
 
   .package-card.popular:hover {
     transform: translateY(-15px);
-  }
-
-  .stats-card {
-    grid-template-columns: 1fr;
-    gap: 30px;
   }
 
   .tools-logos {
@@ -1421,57 +1522,4 @@ section {
   .contact .container {
     padding: 80px 15px;
   }
-}
-
-/* Loading Animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-in-up {
-  animation: fadeInUp 0.8s ease forwards;
-}
-
-/* Particle Animation */
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-.floating {
-  animation: float 6s ease-in-out infinite;
-}
-
-/* Gradient Text Animation */
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.gradient-text {
-  background: var(--gradient-text-animation);
-  background-size: 400% 400%;
-  animation: gradientShift 3s ease infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }

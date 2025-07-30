@@ -3,6 +3,7 @@ let currentLang = "es"
 
 function switchLanguage(lang) {
   currentLang = lang
+  localStorage.setItem("currentLang", lang) // Save language to localStorage
 
   // Update active button
   document.querySelectorAll(".lang-btn").forEach((btn) => {
@@ -65,37 +66,10 @@ const observer = new IntersectionObserver((entries) => {
       const delay = entry.target.getAttribute("data-delay") || 0
       setTimeout(() => {
         entry.target.classList.add("animated")
-
-        // Trigger counter animation for stats
-        if (entry.target.classList.contains("stats-section")) {
-          animateCounters()
-        }
       }, delay)
     }
   })
 }, observerOptions)
-
-// Counter animation for statistics
-function animateCounters() {
-  const counters = document.querySelectorAll(".stat-number")
-
-  counters.forEach((counter) => {
-    const target = Number.parseInt(counter.getAttribute("data-target"))
-    const duration = 2000
-    const increment = target / (duration / 16)
-    let current = 0
-
-    const timer = setInterval(() => {
-      current += increment
-      counter.textContent = Math.floor(current) + "+"
-
-      if (current >= target) {
-        counter.textContent = target + "+"
-        clearInterval(timer)
-      }
-    }, 16)
-  })
-}
 
 // EmailJS contact form functionality
 function setupContactForm() {
@@ -260,46 +234,16 @@ document.addEventListener("DOMContentLoaded", () => {
   setupContactForm()
   setupMobileMenu()
 
-  // Add CSS animations
-  const style = document.createElement("style")
-  style.textContent = `
-        @keyframes slideInRight {
-            from { transform: translateX(100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-        @keyframes slideOutRight {
-            from { transform: translateX(0); opacity: 1; }
-            to { transform: translateX(100%); opacity: 0; }
-        }
-        .nav-menu.active {
-            display: flex !important;
-            flex-direction: column;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: rgba(24, 24, 24, 0.98); /* Use darkest color for mobile menu */
-            backdrop-filter: blur(20px);
-            padding: 20px;
-            border-radius: 0 0 15px 15px;
-        }
-        .nav-toggle.active span:nth-child(1) {
-            transform: rotate(-45deg) translate(-5px, 6px);
-        }
-        .nav-toggle.active span:nth-child(2) {
-            opacity: 0;
-        }
-        .nav-toggle.active span:nth-child(3) {
-            transform: rotate(45deg) translate(-5px, -6px);
-        }
-    `
-  document.head.appendChild(style)
-
   // Trigger initial animations
   setTimeout(() => {
     document.body.classList.add("loaded")
   }, 100)
 
-  // Set initial language
-  switchLanguage(currentLang)
+  // Set initial language from localStorage or default
+  const storedLang = localStorage.getItem("currentLang")
+  if (storedLang) {
+    switchLanguage(storedLang)
+  } else {
+    switchLanguage("es") // Default to Spanish
+  }
 })
