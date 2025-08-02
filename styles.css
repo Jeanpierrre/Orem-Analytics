@@ -40,7 +40,9 @@ html {
   --bg-card-on-light-section: var(--color-white); /* Opaque white for contact section elements */
 
   /* Accent Gradients */
-  --gradient-accent-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Original blue/purple */
+  /*--gradient-accent-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Original blue/purple */
+  --gradient-accent-primary: linear-gradient(135deg, #cb751f 0%, #4B0082 100%); /* Original blue/purple */
+
   --gradient-accent-highlight: linear-gradient(135deg, var(--color-dark) 0%, var(--color-medium-dark) 100%); /* Darker for light backgrounds */
   --gradient-hero-title: linear-gradient(
     205deg,
@@ -408,8 +410,8 @@ body {
 }
 
 .btn-primary {
-  background: var(--gradient-accent-primary);
-  color: var(--color-white);
+  background:var(--gradient-accent-primary);
+  color: #ffffff;
   box-shadow: 0 8px 25px var(--shadow-btn-primary);
 }
 
@@ -513,8 +515,27 @@ section {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 25px;
-  color: var(--text-primary-light); /* Primary text color for dark background */
+  color: var(--text-primary-light);/*Primary text color for dark background */
 }
+
+
+.section-title-black {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+    /* color: var(--text-primary-light);/*Primary text color for dark background */
+  color : #000000; /* Dark text on light background */
+}
+
+
+.section-title-black .highlight {
+  background: var(--gradient-accent-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
 
 .section-title .highlight {
   background: var(--gradient-accent-primary);
@@ -525,11 +546,22 @@ section {
 
 .section-subtitle {
   font-size: 1.2rem;
+  color: #ffffff; /* Secondary text color for dark background */
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.section-subtitle-black {
+  font-size: 1.2rem;
   color: #000000; /* Secondary text color for dark background */
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.6;
 }
+
+
+
 
 /* About Section */
 .about-grid {
@@ -687,11 +719,11 @@ section {
 }
 
 .tools .section-header .section-title {
-  color: var(--text-primary-dark); /* Dark text on light background */
+  color:#ffffff; /* Dark text on light background */
 }
 
 .tools .section-header .section-title .highlight {
-  background: var(--gradient-accent-highlight); /* Darker gradient for highlight */
+  background: var(--gradient-accent-primary); /* Darker gradient for highlight */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -878,7 +910,7 @@ section {
   font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 20px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #4B0082 ;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1147,7 +1179,7 @@ section {
 .contact-title {
   font-size: 3.5rem;
   font-weight: 800;
-  color: var(--text-primary-dark); /* Primary text color for light background */
+  color: var(--gradient-accent-primary); /* Primary text color for light background */
   text-shadow: none;
 }
 
