@@ -41,16 +41,17 @@ html {
 
   /* Accent Gradients */
   /*--gradient-accent-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Original blue/purple */
-  --gradient-accent-primary: linear-gradient(135deg, #cb751f 0%, #4B0082 100%); /* Original blue/purple */
+  /*--gradient-accent-primary: linear-gradient(135deg, #cb751f 0%, #4B0082 100%); /* Original blue/purple */
+  --gradient-accent-primary: linear-gradient(135deg, #cb751f 0%, #fff94b 100%); /* Original blue/purple */
 
   --gradient-accent-highlight: linear-gradient(135deg, var(--color-dark) 0%, var(--color-medium-dark) 100%); /* Darker for light backgrounds */
   --gradient-hero-title: linear-gradient(
     205deg,
-    var(--color-white) 0%,
-    var(--color-medium-light) 50%,
-    var(--color-medium-dark) 100%
+    #cb751f,
+    #cb751f,
+     #fff94b
   );
-  --gradient-hero-highlight: linear-gradient(135deg, var(--color-medium-light) 0%, var(--color-medium-dark) 100%);
+  --gradient-hero-highlight: linear-gradient(135deg, #fff94b, #cb751f);
   --gradient-tools-section: transparent; /* Set to transparent to inherit body gradient */
   --gradient-stats-card: linear-gradient(
     135deg,
@@ -1136,7 +1137,7 @@ section {
 }
 
 .team-role {
-  color: var(--color-accent); /* Accent color for role */
+  color:  linear-gradient(135deg, #cb751f 0%, #fff94b 100%); /* Accent color for role */
   font-weight: 600;
   margin-bottom: 15px;
 }
