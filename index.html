@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-es="Orem Analytics - Analizamos tus datos para que tomes mejores decisiones" data-en="Orem Analytics - We analyze your data to help you make better decisions">Orem Analytics - Analizamos tus datos para que tomes mejores decisiones</title>
+  <meta name="description" data-es="Convertimos tus datos en información valiosa para hacer crecer tu negocio. Solicita tu Diagnóstico de Datos Gratuito." data-en="We turn your data into valuable information to grow your business. Request your Free Data Diagnostic.">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="images/icon.png" type="image/x-icon">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+      (function() {
+          emailjs.init("XxWDwMjY2z7-I7smu"); // Public Key
+      })();
+  </script>
+</head>
+<body>
+  <!-- Language Switcher -->
+  <div class="language-switcher">
+      <button class="lang-btn active" data-lang="es">ES</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+      <div class="nav-container">
+          <div class="nav-logo">
+              <img src="images/icon.png" alt="Orem Analytics" class="logo-img">
+              <span data-es="Orem Analytics" data-en="Orem Analytics">Orem Analytics</span>
+          </div>
+          <div class="nav-menu">
+              <a href="#inicio" class="nav-link" data-es="Inicio" data-en="Home">Inicio</a>
+              <a href="#nosotros" class="nav-link" data-es="Nosotros" data-en="About">Nosotros</a>
+              <a href="#servicios" class="nav-link" data-es="Servicios" data-en="Services">Servicios</a>
+              <a href="#herramientas" class="nav-link" data-es="Herramientas" data-en="Tools">Herramientas</a>
+              <a href="#ventajas" class="nav-link" data-es="Ventajas" data-en="Advantages">Ventajas</a>
+              <a href="#contacto" class="nav-link" data-es="Contacto" data-en="Contact">Contacto</a>
+          </div>
+          <div class="nav-toggle">
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+      </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="hero">
+      <div class="hero-background">
+          <img src="images/Fondo.png" alt="Abstract Monochromatic Background" class="hero-bg-image">
+          <div class="hero-overlay"></div>
+          <div class="hero-particles"></div>
+      </div>
+      
+      <div class="hero-content animate-on-scroll">
+          <div class="hero-badge">
+              <i class="fas fa-award"></i>
+              <span data-es="Expertos en Data" data-en="Data Experts">Expertos en Data</span>
+          </div>
+      
+          <h1 class="hero-title">
+              <span data-es="Analizamos tus datos" data-en="We analyze your data">Analizamos tus datos</span><br>
+              <span class="highlight" data-es="para que tomes mejores decisiones" data-en="to make better decisions">para que tomes mejores decisiones</span>
+          </h1>
+
+          <p class="hero-subtitle" data-es="Convertimos tus datos en información valiosa para hacer crecer tu negocio" data-en="We turn your data into valuable information to grow your business">
+              Convertimos tus datos en información valiosa para hacer crecer tu negocio
+          </p>
+      
+          <div class="hero-buttons">
+              <button class="btn btn-primary" onclick="scrollToSection('contacto')">
+                  <span data-es="Solicita tu Diagnóstico de Datos Gratuito" data-en="Request your Free Data Diagnostic">Solicita tu Diagnóstico de Datos Gratuito</span>
+                  <i class="fas fa-arrow-right"></i>
+              </button>
+              <button class="btn btn-secondary" onclick="scrollToSection('nosotros')">
+                  <span data-es="Conocer Más" data-en="Learn More">Conocer Más</span>
+              </button>
+          </div>
+      </div>
+      
+      <div class="scroll-indicator">
+          <div class="scroll-line"></div>
+          <div class="scroll-dot"></div>
+      </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="nosotros" class="about">
+      <div class="container">
+          <div class="section-header animate-on-scroll">
+              <h2 class="section-title">
+                  <span data-es="¿Quiénes" data-en="Who">¿Quiénes</span> 
+                  <span class="highlight" data-es="Somos" data-en="We Are">Somos</span>?
+              </h2>
+              <p class="section-subtitle" data-es="Somos los socios estratégicos que tu empresa necesita para desbloquear el verdadero poder de tus datos, convirtiéndolos en crecimiento sostenible y decisiones rentables." data-en="We are the strategic partners your company needs to unlock the true power of your data, turning it into sustainable growth and profitable decisions.">
+                  Somos los socios estratégicos que tu empresa necesita para desbloquear el verdadero poder de tus datos, convirtiéndolos en crecimiento sostenible y decisiones rentables.
+              </p>
+          </div>
+          
+          <div class="about-grid">
+              <div class="about-card animate-on-scroll" data-delay="0">
+                  <div class="card-image">
+                      <img src="images/Equipo.png" alt="Nuestra Visión">
+                      <div class="card-overlay">
+                          <i class="fas fa-eye"></i>
+                      </div>
+                  </div>
+                  <div class="card-content">
+                      <h3 data-es="Tu Éxito es Nuestra Visión" data-en="Your Success is Our Vision">Tu Éxito es Nuestra Visión</h3>
+                      <p data-es="Democratizamos el acceso a análisis de datos avanzados, permitiendo que empresas de todos los tamaños tomen decisiones basadas en evidencia para alcanzar el éxito sostenible" data-en="We democratize access to advanced data analytics, enabling companies of all sizes to make evidence-based decisions to achieve sustainable success">
+                          Democratizamos el acceso a análisis de datos avanzados, permitiendo que empresas de todos los tamaños tomen decisiones basadas en evidencia para alcanzar el éxito sostenible
+                      </p>
+                  </div>
+              </div>
+              
+              <div class="about-card animate-on-scroll" data-delay="200">
+                  <div class="card-image">
+                      <img src="images/Edificio.png" alt="Nuestra Misión">
+                      <div class="card-overlay">
+                          <i class="fas fa-bullseye"></i>
+                      </div>
+                  </div>
+                  <div class="card-content">
+                      <h3 data-es="Cómo lo Hacemos Posible" data-en="How We Make It Possible">Cómo lo Hacemos Posible</h3>
+                      <p data-es="Transformamos datos complejos en insights claros y accionables, proporcionando a nuestros clientes las herramientas necesarias para optimizar sus operaciones y maximizar su crecimiento" data-en="We transform complex data into clear and actionable insights, providing our clients with the necessary tools to optimize their operations and maximize their growth">
+                          Transformamos datos complejos en insights claros y accionables, proporcionando a nuestros clientes las herramientas necesarias para optimizar sus operaciones y maximizar su crecimiento
+                      </p>
+                  </div>
+              </div>
+              
+              <div class="about-card animate-on-scroll" data-delay="400">
+                  <div class="card-image">
+                      <img src="images/equipos.png" alt="Nuestro Enfoque">
+                      <div class="card-overlay">
+                          <i class="fas fa-cogs"></i>
+                      </div>
+                  </div>
+                  <div class="card-content">
+                      <h3 data-es="Uniendo Datos y Negocio" data-en="Uniting Data and Business">Uniendo Datos y Negocio</h3>
+                      <p data-es="Combinamos experiencia técnica con comprensión del negocio, utilizando metodologías probadas y tecnologías de vanguardia para entregar soluciones personalizadas y efectivas" data-en="We combine technical expertise with business understanding, using proven methodologies and cutting-edge technologies to deliver personalized and effective solutions">
+                          Combinamos experiencia técnica con comprensión del negocio, utilizando metodologías probadas y tecnologías de vanguardia para entregar soluciones personalizadas y efectivas
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="servicios" class="services">
+      <div class="container">
+          <div class="section-header animate-on-scroll">
+              <h2 class="section-title">
+                  <span data-es="Nuestros Servicios:" data-en="Our Services:">Nuestros Servicios:</span> 
+                  <span class="highlight" data-es="Datos que Impulsan tu Crecimiento" data-en="Data that Drives Your Growth">Datos que Impulsan tu Crecimiento</span>
+              </h2>
+              <p class="section-subtitle" data-es="Transformamos tus desafíos en oportunidades, utilizando el poder de los datos para impulsar tu negocio hacia resultados medibles y un futuro más claro." data-en="We transform your challenges into opportunities, using the power of data to drive your business towards measurable results and a clearer future.">
+                  Transformamos tus desafíos en oportunidades, utilizando el poder de los datos para impulsar tu negocio hacia resultados medibles y un futuro más claro.
+              </p>
+          </div>
+          
+          <div class="services-categories">
+              <div class="service-category">
+                  <h3 class="category-title" data-es="Entendiendo tu Presente y Futuro" data-en="Understanding Your Present and Future">Entendiendo tu Presente y Futuro</h3>
+                  <div class="services-grid">
+                      <div class="service-card animate-on-scroll" data-delay="0">
+                          <div class="service-icon">
+                              <i class="fas fa-chart-bar"></i>
+                          </div>
+                          <h3 data-es="Análisis de Rendimiento" data-en="Performance Analysis">Análisis de Rendimiento</h3>
+                          <p data-es="Descubre qué funciona y por qué. Te ayudamos a comprender el desempeño histórico de tu negocio, identificar tendencias clave y optimizar lo que te lleva al éxito." data-en="Discover what works and why. We help you understand your business's historical performance, identify key trends, and optimize what leads you to success.">
+                              Descubre qué funciona y por qué. Te ayudamos a comprender el desempeño histórico de tu negocio, identificar tendencias clave y optimizar lo que te lleva al éxito.
+                          </p>
+                      </div>
+                      
+                      <div class="service-card animate-on-scroll" data-delay="200">
+                          <div class="service-icon">
+                              <i class="fas fa-brain"></i>
+                          </div>
+                          <h3 data-es="Predicción de Oportunidades" data-en="Opportunity Prediction">Predicción de Oportunidades</h3>
+                          <p data-es="Anticipa el mañana con datos. Prevé tendencias de mercado, demanda de productos y nuevas oportunidades de crecimiento para tomar decisiones proactivas y ganar ventaja." data-en="Anticipate tomorrow with data. Predict market trends, product demand, and new growth opportunities to make proactive decisions and gain an advantage.">
+                              Anticipa el mañana con datos. Prevé tendencias de mercado, demanda de productos y nuevas oportunidades de crecimiento para tomar decisiones proactivas y ganar ventaja.
+                          </p>
+                      </div>
+                      
+                      <div class="service-card animate-on-scroll" data-delay="400">
+                          <div class="service-icon">
+                              <i class="fas fa-globe-americas"></i>
+                          </div>
+                          <h3 data-es="Inteligencia de Mercado" data-en="Market Intelligence">Inteligencia de Mercado</h3>
+                          <p data-es="Conoce a fondo tu mercado y clientes. Analizamos tendencias de la industria, la competencia y el comportamiento del consumidor para revelar oportunidades de expansión y posicionamiento." data-en="Thoroughly understand your market and customers. We analyze industry trends, competition, and consumer behavior to reveal expansion and positioning opportunities.">
+                              Conoce a fondo tu mercado y clientes. Analizamos tendencias de la industria, la competencia y el comportamiento del consumidor para revelar oportunidades de expansión y posicionamiento.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="service-category">
+                  <h3 class="category-title" data-es="Herramientas para la Acción y Eficiencia" data-en="Tools for Action and Efficiency">Herramientas para la Acción y Eficiencia</h3>
+                  <div class="services-grid">
+                      <div class="service-card animate-on-scroll" data-delay="600">
+                          <div class="service-icon">
+                              <i class="fas fa-tachometer-alt"></i>
+                          </div>
+                          <h3 data-es="Dashboards Interactivos" data-en="Interactive Dashboards">Dashboards Interactivos</h3>
+                          <p data-es="Visualiza tus datos en tiempo real de forma intuitiva. Paneles personalizados que te permiten monitorear métricas clave y tomar decisiones ejecutivas rápidas y con confianza." data-en="Visualize your data in real-time intuitively. Personalized dashboards that allow you to monitor key metrics and make quick, confident executive decisions.">
+                              Visualiza tus datos en tiempo real de forma intuitiva. Paneles personalizados que te permiten monitorear métricas clave y tomar decisiones ejecutivas rápidas y con confianza.
+                          </p>
+                      </div>
+                      
+                      <div class="service-card animate-on-scroll" data-delay="800">
+                          <div class="service-icon">
+                              <i class="fas fa-file-alt"></i>
+                          </div>
+                          <h3 data-es="Automatización de Reportes" data-en="Report Automation">Automatización de Reportes</h3>
+                          <p data-es="Ahorra tiempo y elimina errores. Automatizamos la generación de tus informes y análisis periódicos, asegurando que tu equipo siempre tenga información actualizada sin esfuerzo manual." data-en="Save time and eliminate errors. We automate the generation of your periodic reports and analyses, ensuring your team always has up-to-date information without manual effort.">
+                              Ahorra tiempo y elimina errores. Automatizamos la generación de tus informes y análisis periódicos, asegurando que tu equipo siempre tenga información actualizada sin esfuerzo manual.
+                          </p>
+                      </div>
+                      
+                      <div class="service-card animate-on-scroll" data-delay="1000">
+                          <div class="service-icon">
+                              <i class="fas fa-users-cog"></i>
+                          </div>
+                          <h3 data-es="Consultoría Estratégica" data-en="Strategic Consulting">Consultoría Estratégica</h3>
+                          <p data-es="Transforma tus datos en estrategia. Recibe asesoramiento experto para diseñar e implementar planes basados en información sólida que optimicen tus operaciones y disparen tu retorno de inversión (ROI)." data-en="Transform your data into strategy. Receive expert advice to design and implement plans based on solid information that optimize your operations and boost your return on investment (ROI).">
+                              Transforma tus datos en estrategia. Recibe asesoramiento experto para diseñar e implementar planes basados en información sólida que optimicen tus operaciones y disparen tu retorno de inversión (ROI).
+                          </p>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="service-category">
+                  <h3 class="category-title" data-es="Protección y Optimización Específica" data-en="Specific Protection and Optimization">Protección y Optimización Específica</h3>
+                  <div class="services-grid">
+                      <div class="service-card-black-black animate-on-scroll" data-delay="1200">
+                          <div class="service-icon">
+                              <i class="fas fa-shield-alt"></i>
+                          </div>
+                          <h3 data-es="Gestión de Riesgos" data-en="Risk Management">Gestión de Riesgos</h3>
+                          <p data-es="Protege tu negocio con datos. Identificamos y evaluamos riesgos potenciales en tus operaciones e inversiones, dándote las herramientas para mitigarlos y asegurar la continuidad de tus operaciones." data-en="Protect your business with data. We identify and evaluate potential risks in your operations and investments, giving you the tools to mitigate them and ensure the continuity of your operations.">
+                              Protege tu negocio con datos. Identificamos y evaluamos riesgos potenciales en tus operaciones e inversiones, dándote las herramientas para mitigarlos y asegurar la continuidad de tus operaciones.
+                          </p>
+                      </div>
+
+                      <div class="service-card-black-black animate-on-scroll" data-delay="1400">
+                          <div class="service-icon">
+                              <i class="fas fa-bullhorn"></i>
+                          </div>
+                          <h3 data-es="Marketing Impulsado por Datos" data-en="Data-Driven Marketing">Marketing Impulsado por Datos</h3>
+                          <p data-es="Optimiza tus campañas y ventas. Analizamos el rendimiento de tus estrategias de marketing para identificar qué funciona, dónde invertir mejor y cómo atraer a más clientes de forma efectiva." data-en="Optimize your campaigns and sales. We analyze the performance of your marketing strategies to identify what works, where to invest better and how to effectively attract more customers.">
+                              Optimiza tus campañas y ventas. Analizamos el rendimiento de tus estrategias de marketing para identificar qué funciona, dónde invertir mejor y cómo atraer a más clientes de forma efectiva.
+                          </p>
+                      </div>
+
+                      <div class="service-card-black-black animate-on-scroll" data-delay="1600">
+                          <div class="service-icon">
+                              <i class="fas fa-cogs"></i>
+                          </div>
+                          <h3 data-es="Desarrollo de Soluciones a Medida" data-en="Custom Solution Development">Desarrollo de Soluciones a Medida</h3>
+                          <p data-es="Creamos herramientas y sistemas de datos diseñados solo para ti. Desarrollamos soluciones personalizadas que se integran perfectamente con tus operaciones y resuelven tus desafíos únicos." data-en="We create data tools and systems designed just for you. We develop customized solutions that integrate seamlessly with your operations and solve your unique challenges.">
+                              Creamos herramientas y sistemas de datos diseñados solo para ti. Desarrollamos soluciones personalizadas que se integran perfectamente con tus operaciones y resuelven tus desafíos únicos.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="section-cta animate-on-scroll">
+              <button class="btn btn-primary" onclick="scrollToSection('contacto')">
+                  <span data-es="Agenda tu Diagnóstico de Datos Gratuito" data-en="Schedule your Free Data Diagnostic">Agenda tu Diagnóstico de Datos Gratuito</span>
+                  <i class="fas fa-calendar-alt"></i>
+              </button>
+          </div>
+      </div>
+  </section>
+
+  <!-- Tools Section -->
+  <section id="herramientas" class="tools">
+      <div class="container">
+          <div class="section-header animate-on-scroll">
+              <h2 class="section-title-black">
+                  <span data-es="Nuestras Herramientas:" data-en="Our Tools:">Nuestras Herramientas:</span> 
+                  <span class="highlight" data-es="Potenciando tus Datos" data-en="Empowering Your Data">Potenciando tus Datos</span>
+              </h2>
+              <p class="section-subtitle" data-es="Empleamos las plataformas y herramientas líderes de la industria para asegurar análisis rigurosos, soluciones innovadoras y resultados que impulsan tu crecimiento." data-en="We use the industry's leading platforms and tools to ensure rigorous analysis, innovative solutions, and results that drive your growth.">
+                  Empleamos las plataformas y herramientas líderes de la industria para asegurar análisis rigurosos, soluciones innovadoras y resultados que impulsan tu crecimiento.
+              </p>
+          </div>
+          
+          <div class="tools-logos animate-on-scroll">
+              <div class="tool-logo">
+    <i class="fab fa-python"></i>
+    <span>Python</span>
+</div>
+<div class="tool-logo">
+    <i class="fas fa-table"></i>
+    <span>Pandas</span>
+</div>
+<div class="tool-logo">
+    <i class="fas fa-chart-area"></i>
+    <span>Seaborn</span>
+</div>
+<div class="tool-logo">
+    <i class="fas fa-chart-pie"></i>
+    <span>Plotly/Dash</span>
+</div>
+<div class="tool-logo">
+    <i class="fab fa-r-project"></i>
+    <span>R Studio</span>
+</div>
+<div class="tool-logo">
+    <i class="fas fa-chart-bar"></i>
+    <span>PBI</span>
+</div>
+<div class="tool-logo">
+    <i class="fas fa-chart-line"></i>
+    <span>Tableau</span>
+</div>
+<div class="tool-logo">
+    <i class="fas fa-database"></i>
+    <span>SQL</span>
+</div>
+<div class="tool-logo">
+    <i class="fab fa-google"></i>
+    <span>G Analytics</span>
+</div>
+<div class="tool-logo">
+    <i class="fas fa-cloud"></i>
+    <span>GCP</span>
+</div>
+<div class="tool-logo">
+    <i class="fab fa-aws"></i>
+    <span>AWS</span>
+</div>
+<div class="tool-logo">
+    <i class="fab fa-microsoft"></i>
+    <span>Azure</span>
+</div>
+<div class="tool-logo">
+    <i class="fas fa-cube"></i>
+    <span>Databricks</span>
+</div>
+<div class="tool-logo">
+    <i class="fas fa-fire"></i>
+    <span>Apache/Spark</span>
+</div>
+<div class="tool-logo">
+    <i class="fas fa-server"></i>
+    <span>Bigquery</span>
+</div>
+<div class="tool-logo">
+    <i class="fas fa-warehouse"></i>
+    <span>Redshift</span>
+</div>
+<div class="tool-logo">
+    <i class="fas fa-robot"></i>
+    <span>Scikit-learn</span>
+</div>
+<div class="tool-logo">
+    <i class="fas fa-brain"></i>
+    <span>Tensorflow</span>
+</div>
+          </div>
+
+          <!-- Companies Section -->
+          <div class="companies-section animate-on-scroll">
+              <h2 class="companies-title" data-es="Dónde Nuestro Equipo Ha Dejado Huella" data-en="Where Our Team Has Left Its Mark">
+                  Dónde Nuestro Equipo Ha Dejado Huella
+              </h2>
+              <div class="companies-marquee-container">
+                  <div class="companies-static-logos">
+                      <div class="company-logo-item">
+    <img src="Iconos/CC.png" alt="Credicorp Capital Logo">
+</div>
+<div class="company-logo-item">
+    <img src="Iconos/col.png" >
+</div>
+<div class="company-logo-item">
+    <img src="Iconos/keola.png" alt="Keola Logo">
+</div>
+<div class="company-logo-item">
+    <img src="Iconos/ribe.png" alt="Cieneguilla Ribera del Rio Logo">
+</div>
+<div class="company-logo-item">
+    <img src="Iconos/vega.png" alt="Vegenanito Logo">
+</div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Advantages Section -->
+  <section id="ventajas" class="advantages">
+      <div class="container">
+          <div class="section-header animate-on-scroll">
+              <h2 class="section-title-black">
+                  <span data-es="¿Por Qué Elegir a" data-en="Why Choose">Por Qué Elegir a</span> 
+                  <span class="highlight" data-es="Orem Analytics?" data-en="Orem Analytics?">Orem Analytics</span>
+              </h2>
+              <p class="section-subtitle-black" data-es="Descubre las ventajas estratégicas de trabajar con expertos externos que impulsarán la transformación y el crecimiento de tu negocio, sin las limitaciones de una contratación interna." data-en="Discover the strategic advantages of working with external experts who will drive your business transformation and growth, without the limitations of internal hiring.">
+                  Descubre las ventajas estratégicas de trabajar con expertos externos que impulsarán la transformación y el crecimiento de tu negocio, sin las limitaciones de una contratación interna.
+              </p>
+          </div>
+          
+          <div class="advantages-grid">
+              <div class="advantage-card animate-on-scroll" data-delay="0">
+                  <div class="advantage-icon">
+                      <i class="fas fa-rocket"></i>
+                  </div>
+                  <h3 data-es="Resultados en Tiempo Record" data-en="Results in Record Time">Resultados en Tiempo Record</h3>
+                  <p data-es="Inicia tus proyectos de inmediato. Elimina largos procesos de contratación, formación y el riesgo de rotación de personal, asegurando que tu inversión genere resultados sin demoras que paralicen tu avance." data-en="Start your projects immediately. Eliminate long hiring and training processes and the risk of staff turnover, ensuring your investment generates results without delays that paralyze your progress.">
+                      Inicia tus proyectos de inmediato. Elimina largos procesos de contratación, formación y el riesgo de rotación de personal, asegurando que tu inversión genere resultados sin demoras que paralicen tu avance.
+                  </p>
+              </div>
+              
+              <div class="advantage-card animate-on-scroll" data-delay="200">
+                  <div class="advantage-icon">
+                      <i class="fas fa-expand-arrows-alt"></i>
+                  </div>
+                  <h3 data-es="Flexibilidad Total" data-en="Total Flexibility">Flexibilidad Total</h3>
+                  <p data-es="Adapta nuestros servicios a tus necesidades exactas. Obtén soluciones escalables para proyectos puntuales o soporte continuo, sin la carga de costos fijos de un empleado permanente que restrinja tu agilidad empresarial." data-en="Adapt our services to your exact needs. Get scalable solutions for specific projects or continuous support, without the burden of fixed costs of a permanent employee that restricts your business agility.">
+                      Adapta nuestros servicios a tus necesidades exactas. Obtén soluciones escalables para proyectos puntuales o soporte continuo, sin la carga de costos fijos de un empleado permanente que restrinja tu agilidad empresarial.
+                  </p>
+              </div>
+              
+              <div class="advantage-card animate-on-scroll" data-delay="400">
+                  <div class="advantage-icon">
+                      <i class="fas fa-users"></i>
+                  </div>
+                  <h3 data-es="Equipo de Especialistas" data-en="Team of Specialists">Equipo de Especialistas</h3>
+                  <p data-es="Accede a un equipo diverso de especialistas con dominio en múltiples tecnologías y metodologías de análisis de datos (como Python, Power BI, Machine Learning y más). Supera las limitaciones de conocimiento de un único empleado y maximiza tu potencial de crecimiento." data-en="Access a diverse team of specialists with expertise in multiple data analysis technologies and methodologies (such as Python, Power BI, Machine Learning, and more). Overcome the knowledge limitations of a single employee and maximize your growth potential.">
+                      Accede a un equipo diverso de especialistas con dominio en múltiples tecnologías y metodologías de análisis de datos (como Python, Power BI, Machine Learning y más). Supera las limitaciones de conocimiento de un único empleado y maximiza tu potencial de crecimiento.
+                  </p>
+              </div>
+              
+              <div class="advantage-card animate-on-scroll" data-delay="600">
+                  <div class="advantage-icon">
+                      <i class="fas fa-piggy-bank"></i>
+                  </div>
+                  <h3 data-es="Reducción de Costos" data-en="Cost Reduction">Reducción de Costos</h3>
+                  <p data-es="Elimina los altos costos asociados a la contratación interna: planillas, beneficios, equipos, licencias de software y capacitación. Invierte solo en resultados concretos y medibles que generen un retorno de inversión (ROI) directo para tu negocio." data-en="Eliminate the high costs associated with internal hiring: payroll, benefits, equipment, software licenses, and training. Invest only in concrete and measurable results that generate a direct return on investment (ROI) for your business.">
+                      Elimina los altos costos asociados a la contratación interna: planillas, beneficios, equipos, licencias de software y capacitación. Invierte solo en resultados concretos y medibles que generen un retorno de inversión (ROI) directo para tu negocio.
+                  </p>
+              </div>
+              
+              <div class="advantage-card animate-on-scroll" data-delay="800">
+                  <div class="advantage-icon">
+                      <i class="fas fa-crown"></i>
+                  </div>
+                  <h3 data-es="Expertise Accesible" data-en="Accessible Expertise">Expertise Accesible</h3>
+                  <p data-es="Accede a conocimiento experto de alto nivel sin la inversión de un salario senior. Ofrecemos capacidades analíticas de calidad enterprise a precios accesibles, democratizando el acceso a la excelencia en datos para empresas de todos los tamaños." data-en="Access high-level expert knowledge without the investment of a senior salary. We offer enterprise-quality analytical capabilities at affordable prices, democratizing access to data excellence for businesses of all sizes.">
+                      Accede a conocimiento experto de alto nivel sin la inversión de un salario senior. Ofrecemos capacidades analíticas de calidad enterprise a precios accesibles, democratizando el acceso a la excelencia en datos para empresas de todos los tamaños.
+                  </p>
+              </div>
+              
+              <div class="advantage-card animate-on-scroll" data-delay="1000">
+                  <div class="advantage-icon">
+                      <i class="fas fa-handshake"></i>
+                  </div>
+                  <h3 data-es="Estabilidad Operativa" data-en="Operational Stability">Estabilidad Operativa</h3>
+                  <p data-es="Asegura la continuidad y estabilidad de tus proyectos. Elimina el riesgo de rotación de personal y la pérdida de conocimiento. Garantizamos compromiso y soporte a largo plazo, protegiendo así tu inversión estratégica y la fluidez de tus operaciones." data-en="Ensure the continuity and stability of your projects. Eliminate the risk of staff turnover and loss of knowledge. We guarantee long-term commitment and support, thus protecting your strategic investment and the fluidity of your operations.">
+                      Asegura la continuidad y estabilidad de tus proyectos. Elimina el riesgo de rotación de personal y la pérdida de conocimiento. Garantizamos compromiso y soporte a largo plazo, protegiendo así tu inversión estratégica y la fluidez de tus operaciones.
+                  </p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contacto" class="contact">
+      <div class="container">
+          <div class="section-header animate-on-scroll">
+              <h2 class="section-title contact-title">
+                  <span data-es="¿Tienes otra pregunta?" data-en="Have another question?">¿Tienes otra pregunta?</span><br>
+                  <span class="highlight" data-es="Hablemos" data-en="Let's Talk">Hablemos</span>
+              </h2>
+          </div>
+          
+          <div class="contact-content animate-on-scroll">
+              <div class="contact-form-container">
+                  <form class="contact-form" id="contactForm">
+                      <div class="form-row">
+                          <div class="form-group">
+                              <label for="firstName" data-es="Nombre*" data-en="First name*">Nombre*</label>
+                              <input type="text" id="firstName" name="firstName" required data-placeholder-es="Tu nombre" data-placeholder-en="Your first name">
+                          </div>
+                          <div class="form-group">
+                              <label for="lastName" data-es="Apellido*" data-en="Last name*">Apellido*</label>
+                              <input type="text" id="lastName" name="lastName" required data-placeholder-es="Tu apellido" data-placeholder-en="Your last name">
+                          </div>
+                      </div>
+                      
+                      <div class="form-group">
+                          <label for="companyName" data-es="Nombre de la Empresa" data-en="Company Name">Nombre de la Empresa</label>
+                          <input type="text" id="companyName" name="companyName" data-placeholder-es="Tu empresa" data-placeholder-en="Your company">
+                      </div>
+
+                      <div class="form-group">
+                          <label for="email" data-es="Email*" data-en="Email address*">Email*</label>
+                          <input type="email" id="email" name="email" required data-placeholder-es="tu.email@ejemplo.com" data-placeholder-en="your.email@example.com">
+                      </div>
+                      
+                      <div class="form-group">
+                          <label for="message" data-es="Tu mensaje" data-en="Your message">Tu mensaje</label>
+                          <textarea id="message" name="message" rows="5" data-placeholder-es="Escribe tu mensaje aquí..." data-placeholder-en="Write your message here..."></textarea>
+                      </div>
+                      
+                      <div class="form-checkbox">
+                          <input type="checkbox" id="privacy" name="privacy" required>
+                          <label for="privacy" data-es="Autorizo el uso de los datos proporcionados en este formulario de acuerdo con la Política de Privacidad." data-en="I authorize the use of the data provided in this form in accordance with the Privacy Policy.">
+                              Autorizo el uso de los datos proporcionados en este formulario de acuerdo con la Política de Privacidad.
+                          </label>
+                      </div>
+                      
+                      <button type="submit" class="btn btn-primary contact-btn">
+                          <span data-es="Enviar Solicitud de Diagnóstico" data-en="Send Diagnostic Request">Enviar Solicitud de Diagnóstico</span>
+                      </button>
+                  </form>
+              </div>
+              
+              <div class="contact-info">
+                  <div class="contact-item">
+                      <div class="contact-icon">
+                          <i class="fas fa-envelope"></i>
+                      </div>
+                      <div class="contact-details">
+                          <h4 data-es="Email" data-en="Email">Email</h4>
+                          <p>oremcorporation@gmail.com</p>
+                      </div>
+                  </div>
+                  
+                  <div class="contact-item">
+                      <div class="contact-icon">
+                          <i class="fab fa-whatsapp"></i>
+                      </div>
+                      <div class="contact-details">
+                          <h4 data-es="WhatsApp" data-en="WhatsApp">WhatsApp</h4>
+                          <p>+51 926 883 329</p>
+                      </div>
+                  </div>
+                  
+                  <div class="contact-item">
+                      <div class="contact-icon">
+                          <i class="fas fa-map-marker-alt"></i>
+                      </div>
+                      <div class="contact-details">
+                          <h4 data-es="Ubicación" data-en="Location">Ubicación</h4>
+                          <p data-es="Lima, Perú" data-en="Lima, Peru">Lima, Perú</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+      <div class="container">
+          <div class="footer-content animate-on-scroll">
+              <div class="footer-logo">
+                  <img src="images/icon.png" alt="Orem Analytics" class="logo-img">
+                  <span data-es="Orem Analytics" data-en="Orem Analytics">Orem Analytics</span>
+              </div>
+              
+              <p class="footer-description" data-es="Transformando datos empresariales en decisiones inteligentes para el crecimiento sostenible y la competitividad en el mercado global" data-en="Transforming business data into intelligent decisions for sustainable growth and competitiveness in the global market">
+                  Transformando datos empresariales en decisiones inteligentes para el crecimiento sostenible y la competitividad en el mercado global
+              </p>
+              
+              <div class="footer-buttons">
+                  <button class="btn btn-outline" onclick="window.open('mailto:oremcorporation@gmail.com')">
+                      <i class="fas fa-envelope"></i>
+                      <span data-es="Email" data-en="Email">Email</span>
+                  </button>
+                  <button class="btn btn-outline" onclick="window.open('https://wa.me/51926883329')">
+                      <i class="fab fa-whatsapp"></i>
+                      <span>WhatsApp</span>
+                  </button>
+              </div>
+          </div>
+          
+          <div class="footer-bottom">
+              <p data-es="© 2024 Orem Analytics. Todos los derechos reservados. | Soluciones empresariales de análisis de datos" data-en="© 2024 Orem Analytics. All rights reserved. | Enterprise data analysis solutions">
+                  © 2024 Orem Analytics. Todos los derechos reservados. | Soluciones empresariales de análisis de datos
+              </p>
+          </div>
+      </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
